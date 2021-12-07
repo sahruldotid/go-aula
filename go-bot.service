@@ -1,0 +1,15 @@
+[Unit]
+Description=Elearning Bot
+After=network.target
+
+[Service]
+User=syahrul
+Group=syahrul
+Restart=always
+RestartSec=5s
+WorkingDirectory=/home/syahrul/Golang/bot-api
+Environment=GIN_MODE=release
+ExecStart=/home/syahrul/Golang/bot-api/bot-syahrul
+
+[Install]
+WantedBy=multi-user.target
