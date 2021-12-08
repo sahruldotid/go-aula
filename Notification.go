@@ -21,14 +21,13 @@ func StartNotification() {
 	defer scheduler.Stop()
 
 	//define task here
-	scheduler.AddFunc("*/10 7-17 * * 1-5", NotifyMe)
+	scheduler.AddFunc("*/1 7-17 * * 1-5", NotifyMe)
 	//start
 	go scheduler.Start()
 
 }
 
 func NotifyMe(){
-
 	var user Users
 	if err := db.First(&user).Error; err != nil{
 		return
@@ -48,6 +47,5 @@ func NotifyMe(){
 				message += event.URL
 				sendMessage(message)
 		}
-
 	}
 }
