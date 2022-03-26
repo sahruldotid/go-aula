@@ -7,9 +7,9 @@ User=syahrul
 Group=syahrul
 Restart=always
 RestartSec=5s
-WorkingDirectory=/home/syahrul/Golang/bot-api
+WorkingDirectory=/home/syahrul/AlibabaCloud/Golang/go-aula
 Environment=GIN_MODE=release
-ExecStart=/home/syahrul/Golang/bot-api/bot-syahrul
+ExecStart=/home/syahrul/AlibabaCloud/Golang/go-aula/bot-syahrul
 
 [Install]
 WantedBy=multi-user.target
